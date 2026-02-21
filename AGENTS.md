@@ -3,7 +3,7 @@
 ## Scope
 - Applies to `/Users/asimdeyaf/Documents/Twine`.
 - Primary target for story-script tasks:
-  - `/Users/asimdeyaf/Documents/Twine/Stories/The Simulation_ - Story Overview.html`
+- `/Users/asimdeyaf/Documents/Twine/Stories/tstm-story.html`
 - Explicitly out-of-scope unless requested:
   - `/Users/asimdeyaf/Documents/Twine/Stories/TS_ - Animatic.html`
 
