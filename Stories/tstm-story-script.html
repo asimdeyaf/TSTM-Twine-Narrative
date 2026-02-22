@@ -576,13 +576,27 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   opacity: 0.82;
-  margin: 0.02em 0 0.04em;
+  margin: 0;
+  line-height: 1;
 }
 
 #a1s01-show-vo-meta,
 #a1s01-show-line-codes {
+  margin: 0 0.14em 0 0;
+}
+
+.a1s01-meta-toggle-line {
+  margin: 0;
+  line-height: 1;
+}
+
+.a1s01-meta-toggle-line + .a1s01-meta-toggle-line {
   margin-top: 0;
-  margin-bottom: 0.06em;
+}
+
+.a1s01-meta-toggle-line .vod-hidden-label {
+  margin: 0;
+  line-height: 1;
 }
 
 @media (max-width: 900px) {
@@ -760,8 +774,8 @@ NEW TEST SUBJECT
   &lt;summary&gt;Story Script&lt;/summary&gt;
 &lt;!-- VODMETA scene=A01_S01 sheet=VOD_Sheet_A01_S01.csv source=Twine updated=2026-02-15 by=codex --&gt;
 &lt;div class=&quot;a1s01-meta-toggle-title&quot;&gt;VO Metadata Toggles&lt;/div&gt;
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;&lt;br&gt;
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
+&lt;div class=&quot;a1s01-meta-toggle-line&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;&lt;/div&gt;
+&lt;div class=&quot;a1s01-meta-toggle-line&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;&lt;/div&gt;
 &lt;div class=&quot;a1s01-script&quot;&gt;
 
 |action&gt;[You are waiting in a small office room. A holographic display screen ahead of you reads &quot;Sim Labs: Simulate the Past. Predict the Future.&quot; After a few moments, Ludwig barges in, occasionally repeating the question if you remain silent too long.]
