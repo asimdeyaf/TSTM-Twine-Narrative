@@ -355,38 +355,117 @@ tw-hook[name="branch-path2-if"] details {
   display: block;
 }
 
-/* Narrative Bible collapsible sections (test passages) */
-.nb-collapsible {
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+/* Narrative Bible overview sections */
+.nb-overview {
+  margin-top: 0.65em;
+  margin-bottom: 0.65em;
 }
 
-.nb-collapsible details {
-  margin: 0.55em 0;
-  padding: 0.12em 0;
-  background: transparent;
-  border: none;
+@media (min-width: 576px) {
+  .nb-overview {
+    margin-left: -18%;
+    margin-right: -18%;
+  }
 }
 
-.nb-collapsible summary {
+.nb-overview details {
+  margin: 0.75em 0;
+  padding: 0.45em 0.8em;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+}
+
+.nb-overview summary {
   cursor: pointer;
   list-style-position: inside;
   font-family: "Arial", sans-serif;
-  font-size: 0.9em;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 1.02em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.25;
 }
 
-.nb-collapsible .nb-verbatim {
-  margin-top: 0.55em;
-  white-space: pre-wrap;
+.nb-overview details[open] summary {
+  margin-bottom: 0.55em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.nb-overview .nb-detail-body {
+  color: rgba(255, 255, 255, 1);
   text-align: left;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.35;
+  line-height: 1.4;
+}
+
+.nb-overview .nb-source-line {
+  margin: 0.25em 0 0.6em 0;
+  font-family: "Arial", sans-serif;
+  font-size: 0.94em;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 1);
+}
+
+.nb-overview .nb-detail-body p {
+  margin: 0.35em 0 0.6em 0;
+}
+
+.nb-overview .nb-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6em 0.9em;
+  margin: 0.5em 0 0.8em 0;
+}
+
+.nb-overview .nb-meta-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.45em 0.65em;
+}
+
+.nb-overview .nb-section-title {
+  margin: 0.4em 0 0.45em 0;
+  font-family: "Arial", sans-serif;
+  font-size: 0.95em;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  padding-bottom: 0.2em;
+}
+
+.nb-overview ul {
+  margin: 0.2em 0 0.7em 1.15em;
+  padding: 0;
+}
+
+.nb-overview li {
+  margin: 0.15em 0;
+}
+
+.nb-overview .nb-image-grid {
+  justify-content: space-between;
+}
+
+.nb-overview .nb-image-grid .fit49 {
+  width: 49%;
+}
+
+@media (max-width: 900px) {
+  .nb-overview {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nb-overview .nb-image-grid .fit49,
+  .nb-overview .nb-image-grid .fitHalf {
+    width: 100%;
+  }
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Time-Period-Primitive" color="orange"></tw-tag><tw-tag name="Timeframe_Advanced" color="purple"></tw-tag><tw-tag name="Timeframe_Primitive" color="yellow"></tw-tag><tw-tag name="Timeframe_Modern" color="blue"></tw-tag><tw-tag name="Timeframe_Early" color="green"></tw-tag><tw-passagedata pid="1" name="START GAME" tags="Timeframe_Advanced" position="725,350" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[START GAME SCENE]
 SCENERY FOR A DOOMSDAY
@@ -409,8 +488,8 @@ Before the massive wave smothers you, your vision glitches. A holographic messag
 
 (align:&quot;==&gt;&quot;)[[[Remove Simulator...|Act 1]]]
 
-[[Narrative Bible Import Test (Temp, Local) - A1-S02|NB-ImportTest-A1S02-Local]]
-[[Narrative Bible Import Test (Temp, Local) - A1-S07|NB-ImportTest-A1S07-Local]]
+[[A1-S02 Narrative Overview|NB-ImportTest-A1S02-Local]]
+[[A1-S07 Narrative Overview|NB-ImportTest-A1S07-Local]]
 
 
 
@@ -11782,169 +11861,211 @@ High Hill
 Crumble Islands (The Crumbs)
 	•	Custard Cove
 	•	Swirl Harbor
-</tw-passagedata><tw-passagedata pid="117" name="NB-ImportTest-A1S07" tags="" position="875,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[TEMP IMPORT TEST]
-NARRATIVE BIBLE - DETAILED OVERVIEW SAMPLE]
+</tw-passagedata><tw-passagedata pid="117" name="NB-ImportTest-A1S07" tags="" position="875,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 07]
+FIND THE SIGNAL]
 
-|scene&gt;[(text-style:&quot;underline&quot;)[ACT 1 SCENE 07 - FIND THE SIGNAL]]
-|parenthetical&gt;[(Temporary test passage for Google Docs image + overview import workflow.)]
-|parenthetical&gt;[(Source: Narrative Bible - Detailed Story Overview tab.)]
+|scene&gt;[(text-style:&quot;underline&quot;)[NARRATIVE OVERVIEW]]
 
-You awaken inside a violent war dream and are pushed through three escalating combat environments (daylight trench warfare, dusk ambush trail, and night urban combat). Across each segment, Donut command pressure repeats the same objective: find and activate the signal.
+This passage has been superseded by the formatted overview.
 
-At the climax, your commanding voices overlap and direct you to a console identical to the Sim Labs distress lever. You activate it, and the scene hard-cuts into the next sequence where the real distress system has been triggered.
+(align:&quot;==&gt;&quot;)[[[Open Formatted Overview|NB-ImportTest-A1S07-Local]]]
+(align:&quot;==&gt;&quot;)[[[Return to A1-S01|A1-S01]]]</tw-passagedata><tw-passagedata pid="118" name="NB-ImportTest-A1S02-Local" tags="" position="1025,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 02]
+THE SIMULATION TRAINING EXPERIENCE MODULE™]
 
-|action&gt;[This text is an imported overview test only (not script dialogue).]
+|scene&gt;[(text-style:&quot;underline&quot;)[NARRATIVE OVERVIEW]]
 
-&lt;div class=&quot;imageContainer&quot;&gt;
-  &lt;img src=&quot;https://lh7-rt.googleusercontent.com/docsz/AD_4nXeDf_mDFGQIrbayn3-IQeqgObxdDI6qssdpeQsvuDhvvv2MI8R1twe6KI4mV5sHNGosIrtyHnI-CrZrrGBeQi3wsniEEjz4gBT8tbmHN-eno6zs2E5OpaqVG7U5pzcMAaxYRfhbSgBZU2GT4SBVw5ALTw?key=k6h13mdkNp7tBQxe7fM5qwY8&quot; class=&quot;fit32&quot;&gt;
-  &lt;img src=&quot;https://lh7-rt.googleusercontent.com/docsz/AD_4nXeNeD_02PwGQZkxXB7UgztQ7aM6Sqzka86No0KFmbNMmj97FI29ymRtmwxbwocCPec7QQ0mro1nfr5O2Z1HuFDOR2sKgadWcy41bo2XAPwAZzRGX3_DI0E0DRcTe68CNISoWPhCxaFZZgbxWD9J5_PTPg?key=k6h13mdkNp7tBQxe7fM5qwY8&quot; class=&quot;fit32&quot;&gt;
-&lt;/div&gt;
-
-|parenthetical&gt;[(These two image URLs are temporary signed Google content links for pipeline testing.)]
-
-(align:&quot;==&gt;&quot;)[[[Return to A1-S01|A1-S01]]]</tw-passagedata><tw-passagedata pid="118" name="NB-ImportTest-A1S02-Local" tags="" position="1025,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[TEMP IMPORT TEST]
-NARRATIVE BIBLE - VERBATIM IMPORT SAMPLE]
-
-|scene&gt;[(text-style:&quot;underline&quot;)[ACT 1 SCENE 02 - THE SIMULATION TRAINING EXPERIENCE MODULE™]]
-|parenthetical&gt;[(Source tabs: Concise Story Overview + Detailed Story Overview.)]
-|parenthetical&gt;[(Both summary sections below are verbatim imports from Google Docs.)]
-
-&lt;div class=&quot;nb-collapsible&quot;&gt;
+&lt;div class=&quot;nb-overview&quot;&gt;
   &lt;details&gt;
-    &lt;summary&gt;Concise Summary (Verbatim)&lt;/summary&gt;
-    &lt;div class=&quot;nb-verbatim&quot;&gt;Act 1 Scene 02 – The Simulation Training Experience Module™ || Scene 03 – Back to the Future
-In this training simulation, you learn all the basic mechanics, including moving, shooting, climbing, etc. Crucially, you learn that Sim Labs simulations are multi-layered; meaning you can enter simulations within simulations, recursively. The deeper you go into these simulation layers, the further back in simulated time you travel. Conversely, when you later exit these simulation layers, you jump forward in simulated time. Though you do have to wait for an “extraction event” to occur before you can exit. Throughout the story, you’ll frequently use Simulators to transition between scenes in this way.
-You also learn that anytime you die in a simulation, you simply restart at a checkpoint. Although this is a cliché game mechanic, this actually becomes integral to the story itself.
-Before you finish your training, the simulation is abruptly disrupted by a bombing raid on the Sim Labs facility outside the simulation. An extraction event triggers, and you remove your Simulator to exit the training simulation.&lt;/div&gt;
+    &lt;summary&gt;Concise Summary&lt;/summary&gt;
+    &lt;div class=&quot;nb-detail-body&quot;&gt;
+      &lt;p class=&quot;nb-source-line&quot;&gt;Act 1 Scene 02 – The Simulation Training Experience Module™ || Scene 03 – Back to the Future&lt;/p&gt;
+      &lt;p&gt;In this training simulation, you learn all the basic mechanics, including moving, shooting, climbing, etc. Crucially, you learn that Sim Labs simulations are multi-layered; meaning you can enter simulations within simulations, recursively. The deeper you go into these simulation layers, the further back in simulated time you travel. Conversely, when you later exit these simulation layers, you jump forward in simulated time. Though you do have to wait for an “extraction event” to occur before you can exit. Throughout the story, you’ll frequently use Simulators to transition between scenes in this way.&lt;/p&gt;
+      &lt;p&gt;You also learn that anytime you die in a simulation, you simply restart at a checkpoint. Although this is a cliché game mechanic, this actually becomes integral to the story itself.&lt;/p&gt;
+      &lt;p&gt;Before you finish your training, the simulation is abruptly disrupted by a bombing raid on the Sim Labs facility outside the simulation. An extraction event triggers, and you remove your Simulator to exit the training simulation.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/details&gt;
 
   &lt;details&gt;
-    &lt;summary&gt;Detailed Summary (Verbatim)&lt;/summary&gt;
-    &lt;div class=&quot;nb-verbatim&quot;&gt;Act 1 Scene 02 – The Simulation Training Experience Module™
-Settings:
-- EXT – Sim Labs Training Simulation
-- INT – Weapons Training Zone
-Gameplay Tags:
-- Conversation
-- Combat
-- Tasks
-- Traversal
-Characters:
-- Professor Ludwig (Muffin)
-- Donut Soldiers (Simulated Enemy NPCs)
-- Muffin Hostage (Simulated Hostage NPC)
-Scene Description:
-You start in a blank, white simulation environment, where Professor Ludwig speaks through an intercom to confirm you can hear him. Ludwig mistakenly loads an incorrect simulation featuring gun racks inspired by The Matrix, then quickly corrects his error and loads the intended training environment, a forest setting called “The Sim Labs Training Simulation Experience Module™.”
-Ludwig initially teaches you how to move around using an unconventional arm-swinging method, allowing you to revert to standard movement controls based on your preference. He then introduces you to an important simulation mechanic: removing your Simulator headset enters a virtual menu—the “simulation configuration menu”—distinct from returning to reality. Ludwig clarifies that the only way to truly exit a simulation and return to reality is via an “extraction event,” a concept you’ll encounter repeatedly.
-Next, Ludwig briefly explains item interaction mechanics. You learn how to remotely grab nearby items using “resonance frequency attractors” embedded in your arms.
-Following basic interactions, Ludwig transports you into a dedicated weapons training zone, structured specifically to teach you the game’s core combat mechanics. You receive instruction on using various weapon types and equipment, specifically covering:
-- Firearms (Assault Rifles and Pistols)
-- “Tootsy Pop” grenades (including blue flashbang and brown fragmentation types)
-- “Cit Cat Combustible Composition” (aka C4) breaching charges
-By completing this training segment, you gain foundational combat skills, including firearm handling, inventory management, grenade usage, explosive breaching, and general combat proficiency. This ensures you understand the core mechanics necessary for engaging in combat scenarios for the remainder of the game.
-A possible example of the AI behaviors in the training sequence:
-Enemy Soldiers (Donut Soldiers)
-- Static-Fire Behavior: Enemies remain at fixed lane positions. Each soldier continuously rotates toward the player’s position and fires short bursts at timed intervals using a randomized spread to simulate imperfect aim.
-- Cover Swap: One soldier per encounter performs a simple nav switch, when health drops below a defined threshold, they retreat to a nearby cover point, pause, and resume firing. No further movement logic or pursuit behavior.
-- Hit Reactions: On taking damage, soldiers briefly flinch or stagger, then recover. Upon defeat, they play a death animation.
-- Awareness Logic: Activation is trigger-based; AI only becomes active when the player enters its training lane or hits a predefined point.
-Hostage (Muffin NPC)
-- Stationary Civilian: The hostage remains fixed in position, crouched or tied up, with a looping idle or fear animation.
-After finishing the weapons training, Ludwig instructs you to proceed toward the next training stage, “Super Awesome Adventure Candy Land™.” Along this route, Ludwig delivers a critical caution regarding simulation linearity. In a tongue-in-cheek analogy, he suggests imagining your existence as part of a hypothetical video game developed by a small team, designed primarily around a linear narrative experience. Ludwig uses this “hypothetical” scenario to strongly advise you against deviating from the intended storyline path or performing unusual actions. He explains that such deviations trigger immediate elimination by mysterious “hidden snipers.” This hidden sniper mechanic serves to enforce player adherence to the designed narrative path by instantly killing you upon taking unintended actions, thereby forcing a respawn at a previous checkpoint.
-Ludwig elaborates that originally, his simulation setup included an “Ultra Realism Haptic Engine™,” a device intended to kill test subjects permanently in real life if they died within a simulation. However, this device was disabled by Sim Labs management due to ethical concerns. Ludwig explicitly expresses frustration at this decision, noting that this is why, from now on, any death within simulations will merely cause you to respawn at a previous checkpoint rather than experiencing true permanent death.
-When you reach a fork in the road, Ludwig explicitly directs you toward the right path leading to Super Awesome Adventure Candy Land™, clearly marking the left path as dangerous and unauthorized. Choosing the left path results in being eliminated by hidden sniper fire, forcing you to respawn at the checkpoint until you follow the intended right path.
-Upon finally reaching Candy Land’s entrance, you discover it blocked by a collapsed tunnel. Ludwig explains that Sim Labs simulations utilize a “multi-layered spacetime architecture,” meaning entering deeper simulation layers effectively transports you earlier in simulated history, thus bypassing obstacles by entering deeper simulation layers. To solve the tunnel blockage, Ludwig sends a Simulator device crashing down nearby. He then mistakenly provides an unnecessary invincibility shield upgrade, quickly realizing there are no dangers in the recent past, and deletes it by sending a meteor crashing down. The meteor impact inadvertently knocks the Simulator into a tree, requiring you to climb and retrieve it by following a brief tutorial on climbing mechanics.
-Before entering this deeper simulation layer, Ludwig explicitly warns you about the inherent risks associated with recursively entering simulations within simulations. He explains that each deeper layer carries the risk of inadvertently trapping you multiple layers deeper than intended, complicating your eventual return to reality. With Ludwig’s cautionary note clear, you finally don the Simulator headset, preparing to enter the next simulation layer.
-Narrative Notes:
-- Introduces several core gameplay mechanics and systems:
-- Pause Menu: Accessed by removing your Simulator headset. Importantly, doing this does not exit your current simulation layer unless an “extraction event” occurs, a mechanic fully explained and experienced in the next scene.
-- Basic Interactions: Includes locomotion (movement), remote item pickup within close proximity, and climbing mechanics.
-- Combat Mechanics: Establishes automatic health regeneration, inventory management (primarily combat-related), and basic proficiency in using firearms and various types of equipment.
-- Introduces a crucial narrative-driven gameplay constraint: the hidden sniper mechanic. This enforces player adherence to the intended narrative path by instantly eliminating players who deviate from prescribed story directions or attempt unusual actions, ensuring linear narrative progression via forced checkpoint-based respawns.
-- Establishes an explicit narrative justification for the checkpoint respawn system: Ludwig describes that his original “Ultra Realism Haptic Engine™,” designed to cause real-world death upon simulated death, was disabled due to ethical concerns by Sim Labs management. Thus, simulated deaths merely cause you to respawn at previous checkpoints. This explanation intentionally sets up crucial story developments later at the end of Act 1.
-- The concept of recursive simulation layers is introduced here. Ludwig explains that entering simulations within simulations sends you progressively backward in simulated time.&lt;/div&gt;
+    &lt;summary&gt;Detailed Summary&lt;/summary&gt;
+    &lt;div class=&quot;nb-detail-body&quot;&gt;
+      &lt;p class=&quot;nb-source-line&quot;&gt;Act 1 Scene 02 – The Simulation Training Experience Module™&lt;/p&gt;
+
+      &lt;div class=&quot;nb-meta-grid&quot;&gt;
+        &lt;div class=&quot;nb-meta-card&quot;&gt;
+          &lt;p class=&quot;nb-section-title&quot;&gt;Settings&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;EXT – Sim Labs Training Simulation&lt;/li&gt;
+            &lt;li&gt;INT – Weapons Training Zone&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nb-meta-card&quot;&gt;
+          &lt;p class=&quot;nb-section-title&quot;&gt;Gameplay Tags&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Conversation&lt;/li&gt;
+            &lt;li&gt;Combat&lt;/li&gt;
+            &lt;li&gt;Tasks&lt;/li&gt;
+            &lt;li&gt;Traversal&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nb-meta-card&quot;&gt;
+          &lt;p class=&quot;nb-section-title&quot;&gt;Characters&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Professor Ludwig (Muffin)&lt;/li&gt;
+            &lt;li&gt;Donut Soldiers (Simulated Enemy NPCs)&lt;/li&gt;
+            &lt;li&gt;Muffin Hostage (Simulated Hostage NPC)&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Scene Description&lt;/p&gt;
+      &lt;p&gt;You start in a blank, white simulation environment, where Professor Ludwig speaks through an intercom to confirm you can hear him. Ludwig mistakenly loads an incorrect simulation featuring gun racks inspired by The Matrix, then quickly corrects his error and loads the intended training environment, a forest setting called “The Sim Labs Training Simulation Experience Module™.”&lt;/p&gt;
+      &lt;p&gt;Ludwig initially teaches you how to move around using an unconventional arm-swinging method, allowing you to revert to standard movement controls based on your preference. He then introduces you to an important simulation mechanic: removing your Simulator headset enters a virtual menu—the “simulation configuration menu”—distinct from returning to reality. Ludwig clarifies that the only way to truly exit a simulation and return to reality is via an “extraction event,” a concept you’ll encounter repeatedly.&lt;/p&gt;
+      &lt;p&gt;Next, Ludwig briefly explains item interaction mechanics. You learn how to remotely grab nearby items using “resonance frequency attractors” embedded in your arms.&lt;/p&gt;
+      &lt;p&gt;Following basic interactions, Ludwig transports you into a dedicated weapons training zone, structured specifically to teach you the game’s core combat mechanics. You receive instruction on using various weapon types and equipment, specifically covering:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Firearms (Assault Rifles and Pistols)&lt;/li&gt;
+        &lt;li&gt;“Tootsy Pop” grenades (including blue flashbang and brown fragmentation types)&lt;/li&gt;
+        &lt;li&gt;“Cit Cat Combustible Composition” (aka C4) breaching charges&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;By completing this training segment, you gain foundational combat skills, including firearm handling, inventory management, grenade usage, explosive breaching, and general combat proficiency. This ensures you understand the core mechanics necessary for engaging in combat scenarios for the remainder of the game.&lt;/p&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;AI Behavior Example&lt;/p&gt;
+      &lt;p&gt;A possible example of the AI behaviors in the training sequence:&lt;/p&gt;
+      &lt;p class=&quot;nb-section-title&quot;&gt;Enemy Soldiers (Donut Soldiers)&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Static-Fire Behavior: Enemies remain at fixed lane positions. Each soldier continuously rotates toward the player’s position and fires short bursts at timed intervals using a randomized spread to simulate imperfect aim.&lt;/li&gt;
+        &lt;li&gt;Cover Swap: One soldier per encounter performs a simple nav switch, when health drops below a defined threshold, they retreat to a nearby cover point, pause, and resume firing. No further movement logic or pursuit behavior.&lt;/li&gt;
+        &lt;li&gt;Hit Reactions: On taking damage, soldiers briefly flinch or stagger, then recover. Upon defeat, they play a death animation.&lt;/li&gt;
+        &lt;li&gt;Awareness Logic: Activation is trigger-based; AI only becomes active when the player enters its training lane or hits a predefined point.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p class=&quot;nb-section-title&quot;&gt;Hostage (Muffin NPC)&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Stationary Civilian: The hostage remains fixed in position, crouched or tied up, with a looping idle or fear animation.&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;p&gt;After finishing the weapons training, Ludwig instructs you to proceed toward the next training stage, “Super Awesome Adventure Candy Land™.” Along this route, Ludwig delivers a critical caution regarding simulation linearity. In a tongue-in-cheek analogy, he suggests imagining your existence as part of a hypothetical video game developed by a small team, designed primarily around a linear narrative experience. Ludwig uses this “hypothetical” scenario to strongly advise you against deviating from the intended storyline path or performing unusual actions. He explains that such deviations trigger immediate elimination by mysterious “hidden snipers.” This hidden sniper mechanic serves to enforce player adherence to the designed narrative path by instantly killing you upon taking unintended actions, thereby forcing a respawn at a previous checkpoint.&lt;/p&gt;
+      &lt;p&gt;Ludwig elaborates that originally, his simulation setup included an “Ultra Realism Haptic Engine™,” a device intended to kill test subjects permanently in real life if they died within a simulation. However, this device was disabled by Sim Labs management due to ethical concerns. Ludwig explicitly expresses frustration at this decision, noting that this is why, from now on, any death within simulations will merely cause you to respawn at a previous checkpoint rather than experiencing true permanent death.&lt;/p&gt;
+      &lt;p&gt;When you reach a fork in the road, Ludwig explicitly directs you toward the right path leading to Super Awesome Adventure Candy Land™, clearly marking the left path as dangerous and unauthorized. Choosing the left path results in being eliminated by hidden sniper fire, forcing you to respawn at the checkpoint until you follow the intended right path.&lt;/p&gt;
+      &lt;p&gt;Upon finally reaching Candy Land’s entrance, you discover it blocked by a collapsed tunnel. Ludwig explains that Sim Labs simulations utilize a “multi-layered spacetime architecture,” meaning entering deeper simulation layers effectively transports you earlier in simulated history, thus bypassing obstacles by entering deeper simulation layers. To solve the tunnel blockage, Ludwig sends a Simulator device crashing down nearby. He then mistakenly provides an unnecessary invincibility shield upgrade, quickly realizing there are no dangers in the recent past, and deletes it by sending a meteor crashing down. The meteor impact inadvertently knocks the Simulator into a tree, requiring you to climb and retrieve it by following a brief tutorial on climbing mechanics.&lt;/p&gt;
+      &lt;p&gt;Before entering this deeper simulation layer, Ludwig explicitly warns you about the inherent risks associated with recursively entering simulations within simulations. He explains that each deeper layer carries the risk of inadvertently trapping you multiple layers deeper than intended, complicating your eventual return to reality. With Ludwig’s cautionary note clear, you finally don the Simulator headset, preparing to enter the next simulation layer.&lt;/p&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Narrative Notes&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Introduces several core gameplay mechanics and systems:&lt;/li&gt;
+        &lt;li&gt;Pause Menu: Accessed by removing your Simulator headset. Importantly, doing this does not exit your current simulation layer unless an “extraction event” occurs, a mechanic fully explained and experienced in the next scene.&lt;/li&gt;
+        &lt;li&gt;Basic Interactions: Includes locomotion (movement), remote item pickup within close proximity, and climbing mechanics.&lt;/li&gt;
+        &lt;li&gt;Combat Mechanics: Establishes automatic health regeneration, inventory management (primarily combat-related), and basic proficiency in using firearms and various types of equipment.&lt;/li&gt;
+        &lt;li&gt;Introduces a crucial narrative-driven gameplay constraint: the hidden sniper mechanic. This enforces player adherence to the intended narrative path by instantly eliminating players who deviate from prescribed story directions or attempt unusual actions, ensuring linear narrative progression via forced checkpoint-based respawns.&lt;/li&gt;
+        &lt;li&gt;Establishes an explicit narrative justification for the checkpoint respawn system: Ludwig describes that his original “Ultra Realism Haptic Engine™,” designed to cause real-world death upon simulated death, was disabled due to ethical concerns by Sim Labs management. Thus, simulated deaths merely cause you to respawn at previous checkpoints. This explanation intentionally sets up crucial story developments later at the end of Act 1.&lt;/li&gt;
+        &lt;li&gt;The concept of recursive simulation layers is introduced here. Ludwig explains that entering simulations within simulations sends you progressively backward in simulated time.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
   &lt;/details&gt;
 
   &lt;details&gt;
-    &lt;summary&gt;Reference Images (Local)&lt;/summary&gt;
-    &lt;div class=&quot;imageContainer&quot;&gt;
+    &lt;summary&gt;Reference Images&lt;/summary&gt;
+    &lt;div class=&quot;imageContainer nb-image-grid&quot;&gt;
       &lt;img src=&quot;assets/images/narrative-bible/act-1/scene-02/a1-s02-detailed-overview-01.png&quot; class=&quot;fitHalf&quot;&gt;
     &lt;/div&gt;
   &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Return to A1-S01|A1-S01]]]</tw-passagedata><tw-passagedata pid="119" name="NB-ImportTest-A1S07-Local" tags="" position="1025,725" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[TEMP IMPORT TEST]
-NARRATIVE BIBLE - VERBATIM IMPORT SAMPLE]
+(align:&quot;==&gt;&quot;)[[[Return to A1-S01|A1-S01]]]</tw-passagedata><tw-passagedata pid="119" name="NB-ImportTest-A1S07-Local" tags="" position="1025,725" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 07]
+FIND THE SIGNAL]
 
-|scene&gt;[(text-style:&quot;underline&quot;)[ACT 1 SCENE 07 - FIND THE SIGNAL]]
-|parenthetical&gt;[(Source tabs: Concise Story Overview + Detailed Story Overview.)]
-|parenthetical&gt;[(Both summary sections below are verbatim imports from Google Docs.)]
+|scene&gt;[(text-style:&quot;underline&quot;)[NARRATIVE OVERVIEW]]
 
-&lt;div class=&quot;nb-collapsible&quot;&gt;
+&lt;div class=&quot;nb-overview&quot;&gt;
   &lt;details&gt;
-    &lt;summary&gt;Concise Summary (Verbatim)&lt;/summary&gt;
-    &lt;div class=&quot;nb-verbatim&quot;&gt;Act 1 Scene 07 – Find the Signal
-You experience an intense, surreal combat-themed dream sequence. At the end of the dream, you press a signal switch identical to the one Ludwig warned about.&lt;/div&gt;
+    &lt;summary&gt;Concise Summary&lt;/summary&gt;
+    &lt;div class=&quot;nb-detail-body&quot;&gt;
+      &lt;p class=&quot;nb-source-line&quot;&gt;Act 1 Scene 07 – Find the Signal&lt;/p&gt;
+      &lt;p&gt;You experience an intense, surreal combat-themed dream sequence. At the end of the dream, you press a signal switch identical to the one Ludwig warned about.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/details&gt;
 
   &lt;details&gt;
-    &lt;summary&gt;Detailed Summary (Verbatim)&lt;/summary&gt;
-    &lt;div class=&quot;nb-verbatim&quot;&gt;Act 1 Scene 07 – Find the Signal
-Settings:
-- EXT – Trench Warfare Battlefield (Daylight)
-- EXT – Snowy Forest Trail (Dusk)
-- EXT – Urban Warzone (Night)
-Gameplay Tags:
-- Conversation
-- Combat
-- Tasks
-- Traversal
-Characters:
-- Donut Soldiers (various ranks across eras)
-- Muffin Soldiers (hostile forces)
-- Donut Officer / Fireteam Leader
-- Sergeant Kegan (voice only, an occasional overlapping presence)
-Scene Description:
-Everything is black. The lights have been turned off, and you see nothing. Then, through the darkness, you begin to hear it — the distant rumble of explosions, the faint cries of soldiers, the sound of a raging battlefield.
-Your eyes snap open. You’re in the middle of a war zone, surrounded by chaos. Artillery shells explode across the muddy field ahead. You are fighting alongside Donuts against enemy Muffins. The roar of gunfire is deafening, and the air is thick with smoke and dust.
-This is a dream, brought on by the neural injection Sergeant Kegan gave you in Scene 5. It unfolds with surreal, distorted imagery — grounded combat moments blended with impossible, dreamlike details that defy logic.
-Environment 1 – Trench Warfare (Daylight)
-You find yourself advancing across No Man’s Land with Donut soldiers, charging Muffin trenches under heavy artillery. Each explosion throws mud and debris skyward, and the sounds of battle fade in and out, as if underwater.
-Amid the chaos, you see a surreal mirage: Donut and Muffin children playing together on a small playground in the middle of No Man’s Land — laughing, swinging, chasing each other in slow motion. A shell lands on their position. The vision vanishes in an instant.
-The Donuts push through the Muffin trenches in brutal close-quarters fighting. When the gunfire stops, their officer orders everyone to search for “the signal.” A soldier uncovers a trap door hidden in the ground. The officer points at you and tells you to go down. You drop through the opening, and the trap door slams shut above you.
-Environment 2 – Snowy Trail Ambush (Dusk)
-You find yourself in a dim tunnel lit by weak bulbs. Following them leads to a snowy forest trail as the sun sets, the sky glowing orange behind the trees. You join a small Donut patrol trudging through the snow. Their sergeant scolds you for falling behind, then reminds the squad: “We’re here to find and activate the signal.”
-Moments later, ambush. Gunfire erupts from both sides of the trail as Muffins burst from the treeline and from beneath the snow. The Donut soldiers are cut down one by one as you return fire and fight for survival.
-Through the chaos, one surviving soldier grabs the radio and calls in danger-close air support, shouting coordinates as bullets whip past. The sergeant orders everyone to push through immediately.
-You sprint down the forest path, dodging fire and explosions, racing against time as the sound of approaching helicopters grows louder. The air fills with surreal distortions — snowflakes hanging still in midair, muzzle flashes blinking in slow motion, soldiers shouting words that come out backwards.
-Up ahead, through the fog and falling snow, you spot a single urban building — impossibly out of place in the wilderness. The sergeant yells for everyone to head for it, but you’re the only one who will make it inside alive.
-As you approach the threshold, helicopters glitch into view overhead, flickering between existence and nonexistence as they unleash a strafing run that obliterates the forest behind you. When you turn to look back, the door is gone.
-Environment 3 – Advanced Urban Warfare (Night)
-You’re now standing in the empty room of that urban building. The only exit is ahead. Stepping through, you emerge into a war-torn city street at night. Advanced Donut Spec Ops soldiers surround you, armed with assault rifles, drones, and night-vision gear.
-It’s eerily quiet for a moment as they observe a building in the distance. Then, a missile streaks across the sky and obliterates it in a massive explosion. One soldier launches a drone that scans ahead, showing Muffin signatures preparing defenses further down the street. The fireteam leader signals the advance.
-You move through shattered city blocks, exchanging fire with Muffin squads emerging from buildings that shift and materialize out of nowhere. Entire walls appear where none existed before, trapping you briefly until the layout changes again.
-The team reaches the target building and breaches it. Inside, you fight through several rooms until you come across Donut civilian hostages—already executed. The fireteam leader hardens his voice: “Stay focused. The signal is all that matters.”
-You push upstairs. At the top, you find a console identical to the distress lever in Sim Labs. The leader’s voice begins to overlap with Kegan’s, echoing in your head as both urge you to activate it.
-You press the switch. The scene ends instantly — a hard cut into Scene 8 (“Rude Awakening”), where you realize you’ve pulled the real distress lever inside Sim Labs.
-Narrative Notes:
-- Foreshadowing the game’s overall structure: The dream sequence mirrors the chronological structure of the main game beyond Act 1. Each environment represents a distinct technological and temporal era of the Donut–Muffin war:
-- Daylight / Early Warfare: Primitive combat with semi-automatic rifles and pistols.
-- Dusk / Mid-Era Warfare: Fully automatic weapons and the introduction of air power.
-- Night / Advanced Warfare: Futuristic equipment with night vision, drones, and augmented optics.
-- This progression prefigures Act 2 and beyond, where the player experiences the war’s evolution across time.
-- Purpose within Act 1: This is the only combat-heavy sequence in Act 1 and functions as a preview of the game’s core combat feel — pacing, weapon handling, and tone — before the larger-scale battles that begin in Act 2.
-- Dream logic and player agency: The scene communicates a surreal sense of compulsion and lack of control. The dream’s central command — “Find and activate the signal” — subconsciously drives the player toward performing the same action in reality. The dream isn’t symbolic; it’s directly manipulative, leading to the player’s sleepwalking activation of the real distress signal.
-- Thematic function:
-- Conflict intensity: Reinforces the ferocity of the Muffin–Donut war, showing its brutality across eras rather than as a single isolated conflict.
-- Technological and moral escalation: As warfare advances, weapons become more efficient but the violence more senseless — hinting at the endless cycle that defines both factions.
-- Psychological unease: The overlap of Sergeant Kegan’s voice with the fireteam leader’s blurs the line between command, conditioning, and control — deepening the mystery of whether the player acts of their own will.
-- Causal link to Scene 8: The instant the player presses the signal in the dream, the real distress lever inside Sim Labs is activated, transitioning seamlessly to the catastrophic events of “Rude Awakening.”
-- Overall takeaway: Scene 7 serves as both narrative foreshadowing and gameplay showcase — a bridge between the conceptual world-building of early Act 1 and the large-scale warfare that defines the rest of the game.&lt;/div&gt;
+    &lt;summary&gt;Detailed Summary&lt;/summary&gt;
+    &lt;div class=&quot;nb-detail-body&quot;&gt;
+      &lt;p class=&quot;nb-source-line&quot;&gt;Act 1 Scene 07 – Find the Signal&lt;/p&gt;
+
+      &lt;div class=&quot;nb-meta-grid&quot;&gt;
+        &lt;div class=&quot;nb-meta-card&quot;&gt;
+          &lt;p class=&quot;nb-section-title&quot;&gt;Settings&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;EXT – Trench Warfare Battlefield (Daylight)&lt;/li&gt;
+            &lt;li&gt;EXT – Snowy Forest Trail (Dusk)&lt;/li&gt;
+            &lt;li&gt;EXT – Urban Warzone (Night)&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nb-meta-card&quot;&gt;
+          &lt;p class=&quot;nb-section-title&quot;&gt;Gameplay Tags&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Conversation&lt;/li&gt;
+            &lt;li&gt;Combat&lt;/li&gt;
+            &lt;li&gt;Tasks&lt;/li&gt;
+            &lt;li&gt;Traversal&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nb-meta-card&quot;&gt;
+          &lt;p class=&quot;nb-section-title&quot;&gt;Characters&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Donut Soldiers (various ranks across eras)&lt;/li&gt;
+            &lt;li&gt;Muffin Soldiers (hostile forces)&lt;/li&gt;
+            &lt;li&gt;Donut Officer / Fireteam Leader&lt;/li&gt;
+            &lt;li&gt;Sergeant Kegan (voice only, an occasional overlapping presence)&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Scene Description&lt;/p&gt;
+      &lt;p&gt;Everything is black. The lights have been turned off, and you see nothing. Then, through the darkness, you begin to hear it — the distant rumble of explosions, the faint cries of soldiers, the sound of a raging battlefield.&lt;/p&gt;
+      &lt;p&gt;Your eyes snap open. You’re in the middle of a war zone, surrounded by chaos. Artillery shells explode across the muddy field ahead. You are fighting alongside Donuts against enemy Muffins. The roar of gunfire is deafening, and the air is thick with smoke and dust.&lt;/p&gt;
+      &lt;p&gt;This is a dream, brought on by the neural injection Sergeant Kegan gave you in Scene 5. It unfolds with surreal, distorted imagery — grounded combat moments blended with impossible, dreamlike details that defy logic.&lt;/p&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Environment 1 – Trench Warfare (Daylight)&lt;/p&gt;
+      &lt;p&gt;You find yourself advancing across No Man’s Land with Donut soldiers, charging Muffin trenches under heavy artillery. Each explosion throws mud and debris skyward, and the sounds of battle fade in and out, as if underwater.&lt;/p&gt;
+      &lt;p&gt;Amid the chaos, you see a surreal mirage: Donut and Muffin children playing together on a small playground in the middle of No Man’s Land — laughing, swinging, chasing each other in slow motion. A shell lands on their position. The vision vanishes in an instant.&lt;/p&gt;
+      &lt;p&gt;The Donuts push through the Muffin trenches in brutal close-quarters fighting. When the gunfire stops, their officer orders everyone to search for “the signal.” A soldier uncovers a trap door hidden in the ground. The officer points at you and tells you to go down. You drop through the opening, and the trap door slams shut above you.&lt;/p&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Environment 2 – Snowy Trail Ambush (Dusk)&lt;/p&gt;
+      &lt;p&gt;You find yourself in a dim tunnel lit by weak bulbs. Following them leads to a snowy forest trail as the sun sets, the sky glowing orange behind the trees. You join a small Donut patrol trudging through the snow. Their sergeant scolds you for falling behind, then reminds the squad: “We’re here to find and activate the signal.”&lt;/p&gt;
+      &lt;p&gt;Moments later, ambush. Gunfire erupts from both sides of the trail as Muffins burst from the treeline and from beneath the snow. The Donut soldiers are cut down one by one as you return fire and fight for survival.&lt;/p&gt;
+      &lt;p&gt;Through the chaos, one surviving soldier grabs the radio and calls in danger-close air support, shouting coordinates as bullets whip past. The sergeant orders everyone to push through immediately.&lt;/p&gt;
+      &lt;p&gt;You sprint down the forest path, dodging fire and explosions, racing against time as the sound of approaching helicopters grows louder. The air fills with surreal distortions — snowflakes hanging still in midair, muzzle flashes blinking in slow motion, soldiers shouting words that come out backwards.&lt;/p&gt;
+      &lt;p&gt;Up ahead, through the fog and falling snow, you spot a single urban building — impossibly out of place in the wilderness. The sergeant yells for everyone to head for it, but you’re the only one who will make it inside alive.&lt;/p&gt;
+      &lt;p&gt;As you approach the threshold, helicopters glitch into view overhead, flickering between existence and nonexistence as they unleash a strafing run that obliterates the forest behind you. When you turn to look back, the door is gone.&lt;/p&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Environment 3 – Advanced Urban Warfare (Night)&lt;/p&gt;
+      &lt;p&gt;You’re now standing in the empty room of that urban building. The only exit is ahead. Stepping through, you emerge into a war-torn city street at night. Advanced Donut Spec Ops soldiers surround you, armed with assault rifles, drones, and night-vision gear.&lt;/p&gt;
+      &lt;p&gt;It’s eerily quiet for a moment as they observe a building in the distance. Then, a missile streaks across the sky and obliterates it in a massive explosion. One soldier launches a drone that scans ahead, showing Muffin signatures preparing defenses further down the street. The fireteam leader signals the advance.&lt;/p&gt;
+      &lt;p&gt;You move through shattered city blocks, exchanging fire with Muffin squads emerging from buildings that shift and materialize out of nowhere. Entire walls appear where none existed before, trapping you briefly until the layout changes again.&lt;/p&gt;
+      &lt;p&gt;The team reaches the target building and breaches it. Inside, you fight through several rooms until you come across Donut civilian hostages—already executed. The fireteam leader hardens his voice: “Stay focused. The signal is all that matters.”&lt;/p&gt;
+      &lt;p&gt;You push upstairs. At the top, you find a console identical to the distress lever in Sim Labs. The leader’s voice begins to overlap with Kegan’s, echoing in your head as both urge you to activate it.&lt;/p&gt;
+      &lt;p&gt;You press the switch. The scene ends instantly — a hard cut into Scene 8 (“Rude Awakening”), where you realize you’ve pulled the real distress lever inside Sim Labs.&lt;/p&gt;
+
+      &lt;p class=&quot;nb-section-title&quot;&gt;Narrative Notes&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Foreshadowing the game’s overall structure: The dream sequence mirrors the chronological structure of the main game beyond Act 1. Each environment represents a distinct technological and temporal era of the Donut–Muffin war:&lt;/li&gt;
+        &lt;li&gt;Daylight / Early Warfare: Primitive combat with semi-automatic rifles and pistols.&lt;/li&gt;
+        &lt;li&gt;Dusk / Mid-Era Warfare: Fully automatic weapons and the introduction of air power.&lt;/li&gt;
+        &lt;li&gt;Night / Advanced Warfare: Futuristic equipment with night vision, drones, and augmented optics.&lt;/li&gt;
+        &lt;li&gt;This progression prefigures Act 2 and beyond, where the player experiences the war’s evolution across time.&lt;/li&gt;
+        &lt;li&gt;Purpose within Act 1: This is the only combat-heavy sequence in Act 1 and functions as a preview of the game’s core combat feel — pacing, weapon handling, and tone — before the larger-scale battles that begin in Act 2.&lt;/li&gt;
+        &lt;li&gt;Dream logic and player agency: The scene communicates a surreal sense of compulsion and lack of control. The dream’s central command — “Find and activate the signal” — subconsciously drives the player toward performing the same action in reality. The dream isn’t symbolic; it’s directly manipulative, leading to the player’s sleepwalking activation of the real distress signal.&lt;/li&gt;
+        &lt;li&gt;Thematic function:&lt;/li&gt;
+        &lt;li&gt;Conflict intensity: Reinforces the ferocity of the Muffin–Donut war, showing its brutality across eras rather than as a single isolated conflict.&lt;/li&gt;
+        &lt;li&gt;Technological and moral escalation: As warfare advances, weapons become more efficient but the violence more senseless — hinting at the endless cycle that defines both factions.&lt;/li&gt;
+        &lt;li&gt;Psychological unease: The overlap of Sergeant Kegan’s voice with the fireteam leader’s blurs the line between command, conditioning, and control — deepening the mystery of whether the player acts of their own will.&lt;/li&gt;
+        &lt;li&gt;Causal link to Scene 8: The instant the player presses the signal in the dream, the real distress lever inside Sim Labs is activated, transitioning seamlessly to the catastrophic events of “Rude Awakening.”&lt;/li&gt;
+        &lt;li&gt;Overall takeaway: Scene 7 serves as both narrative foreshadowing and gameplay showcase — a bridge between the conceptual world-building of early Act 1 and the large-scale warfare that defines the rest of the game.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
   &lt;/details&gt;
 
   &lt;details&gt;
-    &lt;summary&gt;Reference Images (Local)&lt;/summary&gt;
-    &lt;div class=&quot;imageContainer&quot;&gt;
+    &lt;summary&gt;Reference Images&lt;/summary&gt;
+    &lt;div class=&quot;imageContainer nb-image-grid&quot;&gt;
       &lt;img src=&quot;assets/images/narrative-bible/act-1/scene-07/a1-s07-detailed-overview-01.png&quot; class=&quot;fit49&quot;&gt;
       &lt;img src=&quot;assets/images/narrative-bible/act-1/scene-07/a1-s07-detailed-overview-02.png&quot; class=&quot;fit49&quot;&gt;
     &lt;/div&gt;
