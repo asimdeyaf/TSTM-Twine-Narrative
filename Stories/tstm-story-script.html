@@ -369,11 +369,15 @@ tw-hook[name="branch-path2-if"] details {
 }
 
 .nb-overview details {
-  margin: 0.24em 0;
+  margin: 0.16em 0;
   padding: 0.14em 0.55em 0.16em;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
+}
+
+.nb-overview details + details {
+  margin-top: 0.52em;
 }
 
 .nb-overview summary {
@@ -389,7 +393,7 @@ tw-hook[name="branch-path2-if"] details {
 }
 
 .nb-overview details[open] summary {
-  margin-bottom: 0.04em;
+  margin-bottom: 0.12em;
   padding-bottom: 0;
   border-bottom: none;
 }
@@ -397,7 +401,7 @@ tw-hook[name="branch-path2-if"] details {
 .nb-overview .nb-detail-body {
   color: rgba(255, 255, 255, 1);
   text-align: left;
-  line-height: 1.24;
+  line-height: 1.26;
 }
 
 .nb-overview br,
@@ -406,7 +410,7 @@ tw-hook[name="branch-path2-if"] details {
 }
 
 .nb-overview .nb-detail-body p {
-  margin: 0.03em 0 0.14em 0;
+  margin: 0.06em 0 0.24em 0;
 }
 
 .nb-overview .nb-detail-body p:first-child {
@@ -422,7 +426,7 @@ tw-hook[name="branch-path2-if"] details {
 }
 
 .nb-overview .nb-section-title {
-  margin: 0.18em 0 0.04em 0;
+  margin: 0.3em 0 0.12em 0;
   font-family: "Arial", sans-serif;
   font-size: 0.9em;
   font-weight: 900;
@@ -439,18 +443,18 @@ tw-hook[name="branch-path2-if"] details {
 
 .nb-overview .nb-section-title:not(:first-of-type) {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 0.16em;
-  margin-top: 0.2em;
+  padding-top: 0.22em;
+  margin-top: 0.34em;
 }
 
 .nb-overview ul {
-  margin: 0.01em 0 0.08em 0.95em;
+  margin: 0.04em 0 0.24em 0.95em;
   padding: 0;
 }
 
 .nb-overview li {
-  margin: 0;
-  line-height: 1.1;
+  margin: 0.01em 0;
+  line-height: 1.16;
 }
 
 .nb-overview .nb-image-grid {
