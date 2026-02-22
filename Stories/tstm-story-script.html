@@ -364,7 +364,8 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 @media (min-width: 576px) {
-  .nb-overview {
+  .nb-overview,
+  .nb-story-script {
     margin-left: -18%;
     margin-right: -18%;
   }
@@ -372,14 +373,17 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 
 .nb-overview details,
 .nb-story-script {
-  margin: 0 0 0.26em;
-  padding: 0.2em 0.62em 0.28em;
+  margin: 0 0 0.38em;
+  padding: 0.2em 0.62em 0.26em;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
 }
 
-.nb-overview details:last-child,
+.nb-overview details:last-child {
+  margin-bottom: 0.34em;
+}
+
 .nb-story-script:last-of-type {
   margin-bottom: 0;
 }
@@ -400,7 +404,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 
 .nb-overview details[open] summary,
 .nb-story-script[open] > summary {
-  margin-bottom: 0.1em;
+  margin-bottom: 0.06em;
 }
 
 .nb-overview .nb-detail-body {
@@ -471,7 +475,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 .nb-story-script {
-  margin-top: 0.22em;
+  margin-top: 0;
   margin-bottom: 0.44em;
 }
 
@@ -483,8 +487,40 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
   margin-right: 0.2em;
 }
 
+.nb-vo-toggles {
+  margin: 0.08em 0 0.26em;
+  padding: 0.22em 0.42em 0.2em;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+}
+
+.nb-vo-toggles-title {
+  font-family: "Arial", sans-serif;
+  font-size: 0.72em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.82;
+  margin: 0 0 0.08em 0;
+}
+
+.nb-vo-toggles .vod-hidden-toggle {
+  margin-right: 0.24em;
+}
+
+.nb-vo-toggles .vod-hidden-label {
+  margin-right: 0;
+  white-space: normal;
+}
+
+.nb-vo-toggles br {
+  line-height: 0.9;
+}
+
 @media (max-width: 900px) {
-  .nb-overview {
+  .nb-overview,
+  .nb-story-script {
     margin-left: 0;
     margin-right: 0;
   }
@@ -496,7 +532,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Time-Period-Primitive" color="orange"></tw-tag><tw-tag name="Timeframe_Advanced" color="purple"></tw-tag><tw-tag name="Timeframe_Primitive" color="yellow"></tw-tag><tw-tag name="Timeframe_Modern" color="blue"></tw-tag><tw-tag name="Timeframe_Early" color="green"></tw-tag><tw-passagedata pid="1" name="START GAME" tags="Timeframe_Advanced" position="725,350" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[START GAME SCENE]
 SCENERY FOR A DOOMSDAY
-EXT - DAWN - RIPPLE RANGE REGION]
+]
 &lt;img src=&quot;https://i.imgur.com/Inlkiz0.jpg&quot; class=&quot;fitHalf&quot;&gt;
 You awaken on a flat desert wasteland. The winds howl. Nothing’s around for miles. Nothing but a far off city beyond mountains in the distance. You gaze at the city. Suddenly, BOOOOOM!
 
@@ -597,7 +633,7 @@ WARNING: These notes are mostly for myself so they are probably messy and confus
 [[Haku Talkabouts]] 
 [[Location Names]] </tw-passagedata><tw-passagedata pid="2" name="A1-S01" tags="Timeframe_Advanced" position="725,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 01]
 NEW TEST SUBJECT
-INT - DAY - SIM LABS HQ]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -655,11 +691,11 @@ INT - DAY - SIM LABS HQ]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 &lt;!-- VODMETA scene=A01_S01 sheet=VOD_Sheet_A01_S01.csv source=Twine updated=2026-02-15 by=codex --&gt;
-
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt; &lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
+&lt;div class=&quot;nb-vo-toggles&quot;&gt;
+  &lt;div class=&quot;nb-vo-toggles-title&quot;&gt;VO Toggles&lt;/div&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
 &lt;div class=&quot;a1s01-script&quot;&gt;
 
 |action&gt;[You are waiting in a small office room. A holographic display screen ahead of you reads &quot;Sim Labs: Simulate the Past. Predict the Future.&quot; After a few moments, Ludwig barges in, occasionally repeating the question if you remain silent too long.]
@@ -773,14 +809,14 @@ INT - DAY - SIM LABS HQ]
 
 
 &lt;/div&gt;
-
+&lt;/div&gt;
 
 &lt;/details&gt;
 
 (align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S02]]]
 </tw-passagedata><tw-passagedata pid="3" name="A1-S02" tags="Timeframe_Modern" position="725,725" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 02]
 THE SIMULATION TRAINING EXPERIENCE MODULE™
-EXT - DAY - TRAINING SIMULATION]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -871,11 +907,11 @@ EXT - DAY - TRAINING SIMULATION]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 &lt;!-- VODMETA scene=A01_S02 sheet=VOD_Sheet_A01_S02.csv source=Twine updated=2026-02-22 by=codex --&gt;
-
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt; &lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
+&lt;div class=&quot;nb-vo-toggles&quot;&gt;
+  &lt;div class=&quot;nb-vo-toggles-title&quot;&gt;VO Toggles&lt;/div&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
 &lt;div class=&quot;a1s02-script&quot;&gt;
 
 |action&gt;[You enter a blank white simulation. The environment changes as you hear Ludwig&#x27;s voice over an intercom.]
@@ -1897,7 +1933,7 @@ actually real FIREARM SAFETY RULES:
 
 
 &lt;/div&gt;
-
+&lt;/div&gt;
 
 MIGRATION AUDIT (A1-S02, legacy CSV -&gt; Twine):
 - Source checked: Assets/__TSTM__/READMEs/VO_Dialogue/_DEPRECATED/Scenes/VOD_Sheet_A01_S02.csv
@@ -2044,7 +2080,7 @@ SCRIPT:
 |name&gt;[]
 |dialogue&gt;[]</tw-passagedata><tw-passagedata pid="6" name="..." tags="" position="525,350" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="A1-S04" tags="Timeframe_Advanced" position="725,975" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 04]
 THE SIMULATION™
-INT - DAY - SIM LABS HQ]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -2106,8 +2142,6 @@ INT - DAY - SIM LABS HQ]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 |action&gt;[You are back in Room 101 at Sim Labs. There are minor signs of damage from a bombing raid: some displaced ceiling tiles, a knocked over plant in the corner, and slight cracks in the walls. LUDWIG bursts into the room, slamming the door behind him. He&#x27;s talking urgently to someone through an earpiece.]
 
 |name&gt;[LUDWIG]
@@ -2158,7 +2192,7 @@ I&#x27;ll leave this simulator for you to put on, whenever you&#x27;re ready. Go
 (align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S05]]]
 </tw-passagedata><tw-passagedata pid="8" name="A1-S05" tags="Timeframe_Advanced" position="725,1100" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 05]
 THE REAL WORLD
-INT &amp; EXT - DAY - FACILITY X]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -2259,8 +2293,6 @@ INT &amp; EXT - DAY - FACILITY X]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 |action&gt;[You are falling through a wormhole-like vortex of cosmic colors. The vortex is redirected. You hear faint, distorted voices.]
 
 |name&gt;[KEGAN]
@@ -2554,7 +2586,7 @@ Ok, I will tell that subject of yours to return back.]
 (align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S06]]]
 </tw-passagedata><tw-passagedata pid="9" name="A1-S06" tags="Timeframe_Advanced" position="725,1225" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 06]
 CORRUPT PROGRAM
-INT - NIGHT - SIM LABS HQ]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -2632,8 +2664,6 @@ INT - NIGHT - SIM LABS HQ]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 |action&gt;[You spawn in an empty room at Sim Labs. The door is slightly open. You walk out in search of Ludwig.]
 
 |name&gt;[LUDWIG]
@@ -2895,7 +2925,7 @@ Rest well Mr. Anderson, we have a long day of experimentation tomorrow. Tata.]
 (align:&quot;==&gt;&quot;)[[[Sleep...|A1-S07]]]
 </tw-passagedata><tw-passagedata pid="10" name="A1-S07" tags="Timeframe_Early Timeframe_Modern Timeframe_Advanced" position="725,1350" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 07]
 FIND THE SIGNAL
-EXT - DAY - TRENCHES BATTLEFIELD]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -3000,8 +3030,6 @@ EXT - DAY - TRENCHES BATTLEFIELD]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 |action&gt;[PART 1: TRENCH WARFARE (Midday)
 Surreal elements: Artillery explosions occasionally send soldiers floating upwards. All the audio can sound slightly muffled and echoed to make it feel more surreal.]
 
@@ -4136,7 +4164,7 @@ Push it down. Push down on the switch!
 (align:&quot;==&gt;&quot;)[[[Wake...|A1-S08]]]
 </tw-passagedata><tw-passagedata pid="11" name="A1-S08" tags="Timeframe_Advanced" position="725,1475" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 08]
 RUDE AWAKENING
-INT - DAY - SIM LABS HQ]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -4255,8 +4283,6 @@ INT - DAY - SIM LABS HQ]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 |action&gt;[YOU abruptly wake from a dream where you pushed a TNT switch, only to find yourself actually pressing the distress signal switch at Sim Labs. Alarms wail throughout the facility, causing chaos.]
 
 |name&gt;[LUDWIG]
@@ -4432,7 +4458,7 @@ If we survives this, Mr. Anderson, you and I are gonna have a serious discussion
 (align:&quot;==&gt;&quot;)[[[Wake...|A1-S09]]]
 </tw-passagedata><tw-passagedata pid="12" name="A1-S09" tags="Timeframe_Advanced" position="725,1600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 09]
 A FATE WORSE THAN DEATH
-INT - DAY - SIM LABS HQ]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -4517,8 +4543,6 @@ INT - DAY - SIM LABS HQ]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
 |action&gt;[You and Professor Ludwig regain consciousness in an interrogation room, both of you tied up. Sergeant Kegan, in charge of the assault on Sim Labs, enters the room.]
 
 |name&gt;[KEGAN]
@@ -5020,7 +5044,7 @@ MY NOTES:
 
 - Whenever a scene ends where you &quot;Remove Simulator&quot; to advance to the next scene, the last thing that happens in that scene is The Simulation™ glitching and a prompt to remove the simulator headset appearing. If I for got to add the sentence &quot;The Simulation™ glitches.&quot;, just assume that&#x27;s what happens anytime before you would remove the simulator at scene&#x27;s end.</tw-passagedata><tw-passagedata pid="14" name="A2-S01" tags="Timeframe_Early" position="900,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 2 - SCENE 01]
 DREJNON
-INT - DAY - DREJNON PRISON DUNGEONS]
+]
 
 &lt;img src=&quot;https://i.imgur.com/4LPsNHQ.jpg&quot; class=&quot;fitHalf&quot;&gt;
 You awaken in a grim underground cell of Drejnon Prison. Two Muffin cellmates, Hector and Cain, occupy adjacent cells. Conditions are dire; food and water are scarce, and the guards rarely appear. Cain is bitter and vengeful toward the Donuts for their cruelty, while Hector tries to maintain dignity and moral reflection even in captivity.
@@ -5071,7 +5095,7 @@ SCRIPT:
 
 |act&gt;[(text-style:&quot;underline&quot;)[ACT 2 - SCENE 01]
 DREJNON
-INT - DAY - DREJNON PRISON DUNGEONS]
+]
 
 |action&gt;[You awaken in the last prison cell at the end of a hallway in the deep underground dungeons of Drejnon Prison. To your left, in a neighboring cell, HECTOR is sleeping. To your right, CAIN stirs awake.]
 
@@ -8151,7 +8175,7 @@ SCRIPT DRAFT:
 
 </tw-passagedata><tw-passagedata pid="30" name="A2-S18" tags="Timeframe_Early" position="1050,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 2 - SCENE 18]
 AMBUSH
-EXT - DAY - DONUT SETTLEMENT]
+]
 &lt;img src=&quot;https://i.imgur.com/AknKIVF.jpg&quot; class=&quot;fitHalf&quot;&gt;
 |parenthetical&gt;[(ART NOTE: No tumbleweed. Tumbleweeds are only in the Ripple Range region. This is not that region.)]
 You end up at a time just after your escape from prison, near the war’s beginning. This time, you are with the Donuts, and will see the war from their perspective.
@@ -8910,7 +8934,7 @@ SCRIPT DRAFT:
 
 </tw-passagedata><tw-passagedata pid="48" name="A2-S27-G" tags="Timeframe_Modern" position="1175,2225" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 2 - SCENE 27-G]
 HVT
-EXT - DAY - MUFFIN TOWN]
+]
 
 You are on the raid with Donuts under commander Johnson to capture Hector, an HVT. This mission starts right before your team is going to breach a wall to capture Hector. 
 
@@ -10505,7 +10529,7 @@ SCRIPT DRAFT:
 
 </tw-passagedata><tw-passagedata pid="92" name="A2-S47-G" tags="Timeframe_Advanced" position="1175,4725" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 2 - SCENE 47-G]
 RESCUE HECTOR
-EXT - NIGHT - SACRED KNIGHTS CAMP]
+]
 
 You sneak into the base of the Sacred Knights where Hector is being held prisoner. You locate where he is and reach him undetected. As you are releasing him, Cain bursts in and notices what&#x27;s going on.
 
@@ -10714,7 +10738,7 @@ SCRIPT DRAFT:
 
 </tw-passagedata><tw-passagedata pid="95" name="A2-S19.3" tags="Timeframe_Early" position="1050,975" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 2 - SCENE 19.3]
 DEBRIEF
-INT - DAY - GENERAL GRIMMER’S OFFICE]
+]
 
 You are at a DDL FOB in Grimmer&#x27;s Office. Grimmer is doing paperwork on his desk. A Donut Hole custodian is cleaning up his office with a duster. Major Graham walks in to inform Grimmer that the meeting is ready to start. There&#x27;s a tense exchange where Graham belittles the Donut Hole and Grimmer indirectly confronts him to defend the Donut Hole. Graham is dismissed. Grimmer stoicly stares out the window for a few moments.
 
@@ -11488,7 +11512,7 @@ SCRIPT DRAFT:
 
 4. Flag designs.</tw-passagedata><tw-passagedata pid="113" name="A1-S03" tags="Timeframe_Primitive Timeframe_Modern" position="725,850" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 03]
 BACK TO THE FUTURE
-EXT - NIGHT - TRAINING SIMULATION]
+]
 
 &lt;div class=&quot;nb-overview&quot;&gt;
 &lt;details&gt;
@@ -11562,9 +11586,6 @@ EXT - NIGHT - TRAINING SIMULATION]
 
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
-
-
-
 |action&gt;[PART A: PREHISTORIC ERA]
 
 |action&gt;[You spawn in a prehistoric time before the construction of Super Awesome Adventure Candy Land™. Dense jungle surrounds you.]
