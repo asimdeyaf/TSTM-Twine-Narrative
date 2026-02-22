@@ -518,6 +518,39 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
   line-height: 0.9;
 }
 
+/* Act 1 Scene 01 spacing + metadata toggle tuning */
+.a1s01-overview details {
+  margin-bottom: 0.5em;
+}
+
+.a1s01-overview details:last-child {
+  margin-bottom: 0.62em;
+}
+
+.a1s01-overview .a1s01-reference-images .nb-detail-body .fitHalf {
+  margin-bottom: 0;
+}
+
+.a1s01-overview .a1s01-reference-images .nb-detail-body .fitHalf + .fitHalf {
+  margin-top: 0.52em;
+}
+
+.a1s01-meta-toggle-title {
+  font-family: "Arial", sans-serif;
+  font-size: 0.72em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.82;
+  margin: 0.06em 0 0.08em;
+}
+
+#a1s01-show-vo-meta,
+#a1s01-show-line-codes {
+  margin-top: 0;
+  margin-bottom: 0.16em;
+}
+
 @media (max-width: 900px) {
   .nb-overview,
   .nb-story-script {
@@ -635,7 +668,7 @@ WARNING: These notes are mostly for myself so they are probably messy and confus
 NEW TEST SUBJECT
 ]
 
-&lt;div class=&quot;nb-overview&quot;&gt;
+&lt;div class=&quot;nb-overview a1s01-overview&quot;&gt;
 &lt;details&gt;
   &lt;summary&gt;Concise Summary&lt;/summary&gt;
   &lt;div class=&quot;nb-detail-body&quot;&gt;
@@ -680,7 +713,7 @@ NEW TEST SUBJECT
   &lt;/div&gt;
 &lt;/details&gt;
 
-&lt;details&gt;
+&lt;details class=&quot;a1s01-reference-images&quot;&gt;
   &lt;summary&gt;Reference Images&lt;/summary&gt;
   &lt;div class=&quot;nb-detail-body&quot;&gt;
     &lt;img src=&quot;https://i.imgur.com/dfUtjvJ.jpg&quot; class=&quot;fitHalf&quot;&gt;
@@ -692,10 +725,9 @@ NEW TEST SUBJECT
 &lt;details class=&quot;nb-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
 &lt;!-- VODMETA scene=A01_S01 sheet=VOD_Sheet_A01_S01.csv source=Twine updated=2026-02-15 by=codex --&gt;
-&lt;div class=&quot;nb-vo-toggles&quot;&gt;
-  &lt;div class=&quot;nb-vo-toggles-title&quot;&gt;VO Toggles&lt;/div&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;&lt;br&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
+&lt;div class=&quot;a1s01-meta-toggle-title&quot;&gt;VO Metadata Toggles&lt;/div&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
 &lt;div class=&quot;a1s01-script&quot;&gt;
 
 |action&gt;[You are waiting in a small office room. A holographic display screen ahead of you reads &quot;Sim Labs: Simulate the Past. Predict the Future.&quot; After a few moments, Ludwig barges in, occasionally repeating the question if you remain silent too long.]
@@ -808,7 +840,6 @@ NEW TEST SUBJECT
 |action&gt;[Ludwig exits, leaving you alone. You pick up the simulator and prepare to put it on.]
 
 
-&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/details&gt;
