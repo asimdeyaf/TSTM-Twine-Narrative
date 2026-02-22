@@ -3,9 +3,9 @@
 ## Scope
 - Applies to `/Users/asimdeyaf/Documents/Twine`.
 - Primary target for story-script tasks:
-- `/Users/asimdeyaf/Documents/Twine/Stories/tstm-story.html`
+- `/Users/asimdeyaf/Documents/Twine/Stories/tstm-story-overview.html`
 - Explicitly out-of-scope unless requested:
-  - `/Users/asimdeyaf/Documents/Twine/Stories/TS_ - Animatic.html`
+  - `/Users/asimdeyaf/Documents/Twine/Stories/tstm-animatic.html`
 
 ## Working Rules
 - Treat the Twine story file as a structured narrative source, not a plain text dump.
