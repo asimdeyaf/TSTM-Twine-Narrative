@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-around; /* This will space out the images evenly */
   flex-wrap: wrap; /* Allows wrapping to next line */
+  gap: 0.65em;
 }
 
 
@@ -360,7 +361,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 
 /* Narrative Bible overview sections */
 .nb-overview {
-  margin: 0.26em 0 0.48em;
+  margin: 0.26em 0 0;
 }
 
 @media (min-width: 576px) {
@@ -381,7 +382,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 .nb-overview details:last-child {
-  margin-bottom: 0.34em;
+  margin-bottom: 0;
 }
 
 .nb-story-script:last-of-type {
@@ -477,6 +478,15 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 .nb-story-script {
   margin-top: 0;
   margin-bottom: 0.44em;
+  max-width: none;
+}
+
+.nb-overview .nb-detail-body > img.fitHalf {
+  margin-bottom: 0;
+}
+
+.nb-overview .nb-detail-body > img.fitHalf + img.fitHalf {
+  margin-top: 0.72em;
 }
 
 .nb-story-script .vod-hidden-label {
@@ -524,7 +534,14 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 .a1s01-overview details:last-child {
-  margin-bottom: 1.05em;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .a1s01-story-script {
+    margin-left: -20%;
+    margin-right: -20%;
+  }
 }
 
 .a1s01-overview .nb-detail-body {
@@ -770,7 +787,7 @@ NEW TEST SUBJECT
 &lt;/details&gt;
 &lt;/div&gt;
 
-&lt;details class=&quot;nb-story-script&quot;&gt;
+&lt;details class=&quot;nb-story-script a1s01-story-script&quot;&gt;
   &lt;summary&gt;Story Script&lt;/summary&gt;
 &lt;!-- VODMETA scene=A01_S01 sheet=VOD_Sheet_A01_S01.csv source=Twine updated=2026-02-15 by=codex --&gt;
 &lt;div class=&quot;a1s01-meta-toggle-title&quot;&gt;VO Metadata Toggles&lt;/div&gt;
