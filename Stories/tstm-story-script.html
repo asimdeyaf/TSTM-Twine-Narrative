@@ -306,7 +306,7 @@ tw-hook[name="branch-path2-if"] details {
 
 tw-story input[type="checkbox"].vod-hidden-toggle {
   transform: scale(1);
-  margin: 0 0.25em 0 0;
+  margin: 0 0.2em 0 0;
   vertical-align: middle;
 }
 
@@ -317,7 +317,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
   font-size: 0.72em;
   opacity: 0.84;
   letter-spacing: 0.04em;
-  margin: 0 0.75em 0 0;
+  margin: 0 0.65em 0 0;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -360,7 +360,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 
 /* Narrative Bible overview sections */
 .nb-overview {
-  margin: 0.34em 0 0.58em;
+  margin: 0.26em 0 0.48em;
 }
 
 @media (min-width: 576px) {
@@ -370,19 +370,22 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
   }
 }
 
-.nb-overview details {
-  margin: 0 0 0.34em;
-  padding: 0.22em 0.62em 0.32em;
+.nb-overview details,
+.nb-story-script {
+  margin: 0 0 0.26em;
+  padding: 0.2em 0.62em 0.28em;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
 }
 
-.nb-overview details:last-child {
+.nb-overview details:last-child,
+.nb-story-script:last-of-type {
   margin-bottom: 0;
 }
 
-.nb-overview summary {
+.nb-overview summary,
+.nb-story-script > summary {
   cursor: pointer;
   list-style-position: inside;
   font-family: "Arial", sans-serif;
@@ -395,22 +398,28 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
   margin: 0;
 }
 
-.nb-overview details[open] summary {
-  margin-bottom: 0.12em;
+.nb-overview details[open] summary,
+.nb-story-script[open] > summary {
+  margin-bottom: 0.1em;
 }
 
 .nb-overview .nb-detail-body {
   color: rgba(255, 255, 255, 1);
   text-align: left;
-  line-height: 1.26;
+  line-height: 1.24;
+}
+
+.nb-overview br,
+.nb-overview tw-consecutive-br {
+  display: none;
 }
 
 .nb-overview .nb-detail-body p {
-  margin: 0.15em 0;
+  margin: 0.12em 0;
 }
 
 .nb-overview .nb-detail-body p + p {
-  margin-top: 0.42em;
+  margin-top: 0.34em;
 }
 
 .nb-overview .nb-detail-body > :first-child {
@@ -422,8 +431,8 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 .nb-overview .nb-detailed-section {
-  margin: 0 0 0.26em;
-  padding: 0 0 0.2em;
+  margin: 0 0 0.22em;
+  padding: 0 0 0.16em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -434,7 +443,7 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 .nb-overview .nb-section-title {
-  margin: 0 0 0.08em;
+  margin: 0 0 0.06em;
   font-family: "Arial", sans-serif;
   font-size: 0.9em;
   font-weight: 900;
@@ -444,13 +453,13 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 }
 
 .nb-overview ul {
-  margin: 0.14em 0 0.24em 1.08em;
+  margin: 0.12em 0 0.18em 1.04em;
   padding: 0;
 }
 
 .nb-overview li {
-  margin: 0.08em 0;
-  line-height: 1.22;
+  margin: 0.04em 0;
+  line-height: 1.14;
 }
 
 .nb-overview a {
@@ -459,6 +468,19 @@ tw-story input[type="checkbox"].vod-hidden-toggle {
 
 .nb-overview a:hover {
   color: #b4deff;
+}
+
+.nb-story-script {
+  margin-top: 0.22em;
+  margin-bottom: 0.44em;
+}
+
+.nb-story-script .vod-hidden-label {
+  margin-right: 0.65em;
+}
+
+.nb-story-script .vod-hidden-toggle {
+  margin-right: 0.2em;
 }
 
 @media (max-width: 900px) {
@@ -631,26 +653,14 @@ INT - DAY - SIM LABS HQ]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S02]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
 
 &lt;!-- VODMETA scene=A01_S01 sheet=VOD_Sheet_A01_S01.csv source=Twine updated=2026-02-15 by=codex --&gt;
 
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;
-&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;
-&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt; &lt;input type=&quot;checkbox&quot; id=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s01-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
 &lt;div class=&quot;a1s01-script&quot;&gt;
-
-|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 01]
-NEW TEST SUBJECT
-INT - DAY - SIM LABS HQ]
 
 |action&gt;[You are waiting in a small office room. A holographic display screen ahead of you reads &quot;Sim Labs: Simulate the Past. Predict the Future.&quot; After a few moments, Ludwig barges in, occasionally repeating the question if you remain silent too long.]
 
@@ -764,10 +774,10 @@ INT - DAY - SIM LABS HQ]
 
 &lt;/div&gt;
 
----
----
----
----
+
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S02]]]
 </tw-passagedata><tw-passagedata pid="3" name="A1-S02" tags="Timeframe_Modern" position="725,725" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 02]
 THE SIMULATION TRAINING EXPERIENCE MODULE™
 EXT - DAY - TRAINING SIMULATION]
@@ -859,26 +869,14 @@ EXT - DAY - TRAINING SIMULATION]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S03]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
 
 &lt;!-- VODMETA scene=A01_S02 sheet=VOD_Sheet_A01_S02.csv source=Twine updated=2026-02-22 by=codex --&gt;
 
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;
-&lt;label for=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt;
-&lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;
-&lt;label for=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s02-show-vo-meta&quot; class=&quot;vod-hidden-label&quot;&gt;Show VO File + Status&lt;/label&gt; &lt;input type=&quot;checkbox&quot; id=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-toggle&quot; /&gt;&lt;label for=&quot;a1s02-show-line-codes&quot; class=&quot;vod-hidden-label&quot;&gt;Show Line Codes&lt;/label&gt;
 &lt;div class=&quot;a1s02-script&quot;&gt;
-
-|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 02]
-THE SIMULATION TRAINING EXPERIENCE MODULE™
-EXT - DAY - TRAINING SIMULATION]
 
 |action&gt;[You enter a blank white simulation. The environment changes as you hear Ludwig&#x27;s voice over an intercom.]
 
@@ -1627,8 +1625,6 @@ actually real FIREARM SAFETY RULES:
 &lt;!-- VODMETA clip=D102203_Ludwig_HiddenSnipersMonologue line=203-A branch=Main speaker=Ludwig --&gt;
 &lt;span class=&quot;vod-line-code&quot;&gt;[203-A]&lt;/span&gt;As you are well aware, our experimental simulations, here at Sim Labs, can sometimes often be extremely dangerous.]
 
----
----
 
 |action&gt;[You follow the path.]
 
@@ -1798,8 +1794,6 @@ actually real FIREARM SAFETY RULES:
 &lt;!-- VODMETA clip=D102216_Ludwig_TunnelHasCollapsed line=216-B branch=Main speaker=Ludwig --&gt;
 &lt;span class=&quot;vod-line-code&quot;&gt;[216-B]&lt;/span&gt;No matter. Because our simulations are designed upon a multi-layered spacetime architecture, each layer deeper within our simulations will effectively place you further in the past.]
 
----
----
 
 |action&gt;[You reach the tunnel entrance to Super Awesome Adventure Candy Land™ but find it has collapsed.]
 
@@ -1904,8 +1898,6 @@ actually real FIREARM SAFETY RULES:
 
 &lt;/div&gt;
 
----
----
 
 MIGRATION AUDIT (A1-S02, legacy CSV -&gt; Twine):
 - Source checked: Assets/__TSTM__/READMEs/VO_Dialogue/_DEPRECATED/Scenes/VOD_Sheet_A01_S02.csv
@@ -1920,10 +1912,10 @@ Follow-up review targets (content/placement quality, not missing lines):
 - Confirm any remaining `VODMETA branch=...` labels against intended canonical branch behavior after narrative polish.
 
 
----
----
----
----
+
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S03]]]
 </tw-passagedata><tw-passagedata pid="4" name="Act 1" tags="Timeframe_Primitive Timeframe_Early Timeframe_Modern Timeframe_Advanced" position="725,475" size="100,100">|specialtitle&gt;[(text-style:&quot;underline&quot;)[The Simulation™]
 (text-size:5)[Act 1]]
 
@@ -2112,17 +2104,9 @@ INT - DAY - SIM LABS HQ]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S05]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
-
-|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 04]
-]
 
 |action&gt;[You are back in Room 101 at Sim Labs. There are minor signs of damage from a bombing raid: some displaced ceiling tiles, a knocked over plant in the corner, and slight cracks in the walls. LUDWIG bursts into the room, slamming the door behind him. He&#x27;s talking urgently to someone through an earpiece.]
 
@@ -2168,6 +2152,10 @@ Do I sound insane to you, Mr. Anderson?]
 I&#x27;ll leave this simulator for you to put on, whenever you&#x27;re ready. Godspeed, Mr. Anderson. Godspeed.]
 
 |action&gt;[Ludwig exits the room, leaving you alone with the simulator. The device boots up with glowing blue elements activating, like on a standard Sim Labs simulator. But this one seems to hum with an otherworldly energy, inviting yet ominous. Exhaust vents on the simulator open up, revealing more blue glowing elements that ramp up in brightness, as if to expel a large amount of heat energy. The display turns on. Swirling psychedelic vortices of fantastic colors can be seen through the simulator headset display. You pick it up, put it on your face, and enter... The Simulation™.]
+
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S05]]]
 </tw-passagedata><tw-passagedata pid="8" name="A1-S05" tags="Timeframe_Advanced" position="725,1100" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 05]
 THE REAL WORLD
 INT &amp; EXT - DAY - FACILITY X]
@@ -2269,17 +2257,9 @@ INT &amp; EXT - DAY - FACILITY X]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S06]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
-
-|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 05]
-]
 
 |action&gt;[You are falling through a wormhole-like vortex of cosmic colors. The vortex is redirected. You hear faint, distorted voices.]
 
@@ -2455,7 +2435,6 @@ Wanna help me waste some ammo?]
   |action&gt;[The bar donut officer walks off.]
 &lt;/details&gt;&lt;/tw-hook&gt;
 
----
 &lt;!-- After the user finishes either branch (Yes or No), the scene merges. --&gt;
 
 |action&gt;[The filled donut secretary now turns her attention to you.]
@@ -2537,8 +2516,6 @@ Ok, I will tell that subject of yours to return back.]
 |name&gt;[GORG]
 |dialogue&gt;[Speaking of which, your mission with Sergeant Kegan is ready to commence. Don&#x27;t keep him waiting.]
 
----
----
 
 |action&gt;[You return to Kegan&#x27;s room. Everyone is staring at a monitor showing Professor Ludwig.]
 
@@ -2571,6 +2548,10 @@ Ok, I will tell that subject of yours to return back.]
 |dialogue&gt;[Good luck soldier.]
 
 |action&gt;[Just after the injection, the filled donut scientist puts the simulator on your face.]
+
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wear Simulator...|A1-S06]]]
 </tw-passagedata><tw-passagedata pid="9" name="A1-S06" tags="Timeframe_Advanced" position="725,1225" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 06]
 CORRUPT PROGRAM
 INT - NIGHT - SIM LABS HQ]
@@ -2649,17 +2630,9 @@ INT - NIGHT - SIM LABS HQ]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Sleep...|A1-S07]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
-
-|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 06]
-]
 
 |action&gt;[You spawn in an empty room at Sim Labs. The door is slightly open. You walk out in search of Ludwig.]
 
@@ -2916,6 +2889,10 @@ It&#x27;s time for you to doze off now.
 Rest well Mr. Anderson, we have a long day of experimentation tomorrow. Tata.]
 
 |action&gt;[You walk in as the door shuts behind you. Everything is pitch black. You go to sleep.]
+
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Sleep...|A1-S07]]]
 </tw-passagedata><tw-passagedata pid="10" name="A1-S07" tags="Timeframe_Early Timeframe_Modern Timeframe_Advanced" position="725,1350" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 07]
 FIND THE SIGNAL
 EXT - DAY - TRENCHES BATTLEFIELD]
@@ -3021,14 +2998,9 @@ EXT - DAY - TRENCHES BATTLEFIELD]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wake...|A1-S08]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
 
 |action&gt;[PART 1: TRENCH WARFARE (Midday)
 Surreal elements: Artillery explosions occasionally send soldiers floating upwards. All the audio can sound slightly muffled and echoed to make it feel more surreal.]
@@ -4159,6 +4131,9 @@ Get your rear end moving soldier! We can’t cover you forever.
 DONUT SOLDIER.
 Push it down. Push down on the switch!
 	YOU push down on the TNT switch. For a split second, you see the enemy buildings explode. In the next instant, you wake from the dream.
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wake...|A1-S08]]]
 </tw-passagedata><tw-passagedata pid="11" name="A1-S08" tags="Timeframe_Advanced" position="725,1475" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 08]
 RUDE AWAKENING
 INT - DAY - SIM LABS HQ]
@@ -4278,14 +4253,8 @@ INT - DAY - SIM LABS HQ]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wake...|A1-S09]]]
-
----
----
----
----
-
-STORY SCRIPT:
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
 
 |action&gt;[YOU abruptly wake from a dream where you pushed a TNT switch, only to find yourself actually pressing the distress signal switch at Sim Labs. Alarms wail throughout the facility, causing chaos.]
@@ -4458,6 +4427,9 @@ Oh dear, not that way!
 Down the stairwell. Quickly!
 If we survives this, Mr. Anderson, you and I are gonna have a serious discussion!
 	YOU reach an impasse where a single missile strikes your position and knocks YOU unconscious.
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wake...|A1-S09]]]
 </tw-passagedata><tw-passagedata pid="12" name="A1-S09" tags="Timeframe_Advanced" position="725,1600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 09]
 A FATE WORSE THAN DEATH
 INT - DAY - SIM LABS HQ]
@@ -4543,14 +4515,9 @@ INT - DAY - SIM LABS HQ]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Wear Simulator...|Act 2]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
-
-STORY SCRIPT:
 
 |action&gt;[You and Professor Ludwig regain consciousness in an interrogation room, both of you tied up. Sergeant Kegan, in charge of the assault on Sim Labs, enters the room.]
 
@@ -5033,6 +5000,9 @@ Alright.
 Drejnon Prison. Built before the war. No prisoner has escaped since it’s construction.
 This will be your new home soldier. Or should I say, test subject Anderson.
 	Kegan puts a simulator on your face.
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Wear Simulator...|Act 2]]]
 </tw-passagedata><tw-passagedata pid="13" name="Act 2" tags="" position="900,475" size="100,100">|specialtitle&gt;[(text-style:&quot;underline&quot;)[The Simulation™]
 (text-size:5)[Act 2]]
 
@@ -11590,21 +11560,10 @@ EXT - NIGHT - TRAINING SIMULATION]
 &lt;/details&gt;
 &lt;/div&gt;
 
-(align:&quot;==&gt;&quot;)[[[Remove Simulator...|A1-S04]]]
+&lt;details class=&quot;nb-story-script&quot;&gt;
+  &lt;summary&gt;Story Script&lt;/summary&gt;
 
----
----
----
----
 
-STORY SCRIPT:
-
-|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 03]
-BACK TO THE FUTURE
-EXT - NIGHT - TRAINING SIMULATION]
-
----
----
 
 |action&gt;[PART A: PREHISTORIC ERA]
 
@@ -11685,8 +11644,6 @@ Well then, everyone else is stupid.]
 |name&gt;[LUDWIG]
 |dialogue&gt;[The simulation has overloaded and an extraction event has triggered. You&#x27;re safe now. You cannot be harmed in this simulation layer anymore. Please remove your simulator now!]
 
----
----
 
 |action&gt;[PART B: TUNNEL UNDER CONSTRUCTION (UPDATED)]
 
@@ -11803,8 +11760,6 @@ Well then, everyone else is stupid.]
 |name&gt;[LUDWIG]
 |dialogue&gt;[That did it. We’re overloading the simulation. Remove your simulator, and we’ll get you back to your time.]
 
----
----
 
 |action&gt;[PART C: ALTERED FUTURE]
 
@@ -11826,6 +11781,10 @@ We&#x27;re under attack in real life!—
 Hold on Mr. Anderson. I&#x27;m getting you out.—]
 
 |action&gt;[Ludwig’s voice cuts out. The simulated world falls apart. Sky pieces crash down, terrain explodes. You dodge debris in a final chaotic sequence. After surviving a set period, a new extraction event triggers. A prompt instructs you to remove your simulator headset.]
+
+&lt;/details&gt;
+
+(align:&quot;==&gt;&quot;)[[[Remove Simulator...|A1-S04]]]
 </tw-passagedata><tw-passagedata pid="114" name="Expletive Replacements" tags="" position="275,625" size="100,100">THE SIMULATION™ Expletive Replacements
 
 Characters in this game world do not use real curse words. They have their own curse words. Muffins and Donuts have curse words that are more native to their speech, but they can all be used by any characters. Here&#x27;s a list of some of the curse words: 
