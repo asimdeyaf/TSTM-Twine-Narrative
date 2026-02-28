@@ -14,6 +14,25 @@
   - `Assets/__TSTM__/READMEs/VO_Dialogue/`
 - When changes are ambiguous, prefer producing a reconciliation proposal before applying edits.
 
+## Session Start Git Sync Check
+- Before making edits, run:
+  - `git fetch origin --prune`
+  - `git status -sb`
+- If local is behind `origin/main`, run `git pull --rebase origin main` before any file changes.
+- If local has uncommitted changes from another session, reconcile those first (commit, stash, or explicitly continue).
+
+## Work Logs
+- Work logging is required for every meaningful edit block (story changes, structure changes, or documentation updates).
+- Keep a running daily work log in:
+  - `READMEs/WorkLogs/YYYY-MM-DD.md`
+- Add an entry for each meaningful work block with:
+  - local timestamp (`HH:MM` with timezone)
+  - operator name (`Asim Deyaf`, plus collaborator when relevant)
+  - sync status (`git status -sb`)
+  - files changed
+  - short summary of narrative or structure edits
+  - commit hash (if committed)
+
 ## Cross-References
 - Unity cross-tool sync process:
   - `Assets/__TSTM__/READMEs/Documentation/Process/CrossTool/README-TwineVODSyncWorkflow.md`
