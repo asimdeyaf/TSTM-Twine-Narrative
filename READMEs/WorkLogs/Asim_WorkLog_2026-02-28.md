@@ -23,7 +23,7 @@
   - `READMEs/README-TwineWorkspaceWorkflow.md`
   - `READMEs/README-WorkLogs.md`
   - `READMEs/WorkLogs/TEMPLATE-WorkLog.md`
-  - `READMEs/WorkLogs/2026-02-28.md`
+  - `READMEs/WorkLogs/Asim_WorkLog_2026-02-28.md`
 - Notes:
   - Story scope remains focused on `Stories/tstm-story-script.html`.
   - Animatic file remains out of scope unless explicitly requested.
@@ -42,9 +42,26 @@
   - `READMEs/README-TwineWorkspaceWorkflow.md`
   - `READMEs/README-WorkLogs.md`
   - `READMEs/WorkLogs/TEMPLATE-WorkLog.md`
-  - `READMEs/WorkLogs/2026-02-28.md`
+  - `READMEs/WorkLogs/Asim_WorkLog_2026-02-28.md`
 - Notes:
   - Unity reference path for mirrored format is not present locally, so naming was standardized directly here.
+- Git status snapshot:
+  - pending (run `git status -sb` before commit)
+- Commit:
+  - pending
+
+### 08:30 CST - Rename daily work log files to Asim-prefixed pattern
+- Operator: Asim Deyaf
+- Summary:
+  - Renamed daily log naming convention to `Asim_WorkLog_YYYY-MM-DD.md`.
+  - Renamed today's log file and updated all references in workspace docs.
+- Files changed:
+  - `AGENTS.md`
+  - `READMEs/README-TwineWorkspaceWorkflow.md`
+  - `READMEs/README-WorkLogs.md`
+  - `READMEs/WorkLogs/Asim_WorkLog_2026-02-28.md`
+- Notes:
+  - Requested filename prefix now uses first name only (`Asim`).
 - Git status snapshot:
   - pending (run `git status -sb` before commit)
 - Commit:

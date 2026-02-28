@@ -24,7 +24,7 @@
 ## Work Logs
 - Work logging is required for every meaningful edit block (story changes, structure changes, or documentation updates).
 - Keep a running daily work log in:
-  - `READMEs/WorkLogs/YYYY-MM-DD.md`
+  - `READMEs/WorkLogs/Asim_WorkLog_YYYY-MM-DD.md`
 - Add an entry for each meaningful work block with:
   - local timestamp (`HH:MM` with timezone)
   - operator name (`Asim Deyaf`, plus collaborator when relevant)

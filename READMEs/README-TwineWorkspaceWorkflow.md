@@ -27,7 +27,7 @@ git pull --rebase origin main
 ## Editing and Logging Flow
 1. Confirm sync status.
 2. Make Twine story changes.
-3. Add/update daily log in `READMEs/WorkLogs/YYYY-MM-DD.md` with local timestamp and operator name (`Asim Deyaf`).
+3. Add/update daily log in `READMEs/WorkLogs/Asim_WorkLog_YYYY-MM-DD.md` with local timestamp and operator name (`Asim Deyaf`).
 4. Commit and push when ready.
 
 ## Commit and Push

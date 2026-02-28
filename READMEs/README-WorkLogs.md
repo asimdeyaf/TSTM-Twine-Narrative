@@ -9,10 +9,10 @@ Store logs in:
 
 ## Naming
 Use one file per day:
-- `YYYY-MM-DD.md`
+- `Asim_WorkLog_YYYY-MM-DD.md`
 
 Example:
-- `2026-02-28.md`
+- `Asim_WorkLog_2026-02-28.md`
 
 ## Minimum Entry Content
 For each meaningful work block, include:
