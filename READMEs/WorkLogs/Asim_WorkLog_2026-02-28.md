@@ -67,6 +67,21 @@
 - Commit:
   - pending
 
+### 09:02 CST - Clarify Cloud versus Local Git workflow
+- Operator: Asim Deyaf
+- Summary:
+  - Added explicit rules that Codex Cloud is a separate clone and still requires commit plus push to update GitHub.
+  - Added environment-switch sync checklist (`fetch`, `status`, `pull --rebase` if behind).
+- Files changed:
+  - `AGENTS.md`
+  - `READMEs/WorkLogs/Asim_WorkLog_2026-02-28.md`
+- Notes:
+  - Clarifies why `commit` is required before `push`.
+- Git status snapshot:
+  - `## main...origin/main` (before this edit block)
+- Commit:
+  - pending
+
 ## Session End
 - Final status: in progress
 - Next step: optionally commit documentation baseline

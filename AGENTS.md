@@ -21,6 +21,13 @@
 - If local is behind `origin/main`, run `git pull --rebase origin main` before any file changes.
 - If local has uncommitted changes from another session, reconcile those first (commit, stash, or explicitly continue).
 
+## Local and Cloud Git Behavior
+- Codex Local and Codex Cloud are separate Git clones of the same repository.
+- Editing in Cloud does not update GitHub automatically; changes must be committed and pushed.
+- `git push` only sends commits. Uncommitted file edits cannot be pushed.
+- Always do `pull -> edit -> commit -> push` in whichever environment is active.
+- When switching environments, sync first (`git fetch origin --prune`, `git status -sb`, and `git pull --rebase origin main` if behind).
+
 ## Work Logs
 - Work logging is required for every meaningful edit block (story changes, structure changes, or documentation updates).
 - Keep a running daily work log in:
