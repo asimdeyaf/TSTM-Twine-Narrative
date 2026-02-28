@@ -85,3 +85,33 @@
 ## Session End
 - Final status: in progress
 - Next step: optionally commit documentation baseline
+
+### 17:33 UTC - Cloud clone Git remote setup and verification
+- Operator: Asim Deyaf
+- Summary:
+  - Configured `origin` for the cloud clone to `https://github.com/asimdeyaf/TSTM-Twine-Narrative.git`.
+  - Fetched remote refs and switched to local `main` tracking `origin/main`.
+  - Verified this environment is now synced and ready for normal `pull -> edit -> commit -> push` workflow.
+- Files changed:
+  - `READMEs/WorkLogs/Asim_WorkLog_2026-02-28.md`
+- Notes:
+  - Prior to setup, this cloud clone was on branch `work` with no `origin` remote configured.
+- Git status snapshot:
+  - `## main...origin/main` (after setup, before this log write)
+- Commit:
+  - pending
+
+### 18:28 UTC - Insert A1-S02 conditional line code block 011.2
+- Operator: Asim Deyaf
+- Summary:
+  - Added a new `If` branch dialogue block in Act 1 Scene 2 between line code `[011]` and `[012-*]`.
+  - Inserted the requested partial line codes `[011.2a]`, `[011.2b]`, and `[011.2c]` for the "not yet reached end of path" condition.
+- Files changed:
+  - `Stories/tstm-story-script.html`
+  - `READMEs/WorkLogs/Asim_WorkLog_2026-02-28.md`
+- Notes:
+  - Preserved surrounding passage structure and existing line-code ordering context.
+- Git status snapshot:
+  - `## work` (before commit)
+- Commit:
+  - pending
