@@ -838,7 +838,10 @@ WARNING: These notes are mostly for myself so they are probably messy and confus
 [[Expletive Replacements]] 
 [[Linguistic Terms]] 
 [[Haku Talkabouts]] 
-[[Location Names]] </tw-passagedata><tw-passagedata pid="2" name="A1-S01" tags="Timeframe_Advanced" position="725,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 01]
+[[Location Names]] 
+[[Combat Callouts|Combat Callouts]] 
+[[Civilian Callouts|Civilian Callouts]] 
+</tw-passagedata><tw-passagedata pid="2" name="A1-S01" tags="Timeframe_Advanced" position="725,600" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[ACT 1 - SCENE 01]
 NEW TEST SUBJECT
 ]
 
@@ -13461,6 +13464,77 @@ High Hill
 Crumble Islands (The Crumbs)
 	•	Custard Cove
 	•	Swirl Harbor
+</tw-passagedata><tw-passagedata pid="117" name="Combat Callouts" tags="" position="875,350" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[COMBAT CALLOUTS]]
+
+Speaker IDs (current):
+- DonutMaleTypeA
+- DonutMaleTypeB
+
+Filename template:
+D_&lt;Intent&gt;_&lt;SpeakerId&gt;_&lt;DialogueLine&gt;
+
+Record each line once per speaker ID above.
+
+|scene&gt;[Breaching]
+|dialogue&gt;[D_Breaching_<SpeakerId>_StandClearBreaching]
+
+|scene&gt;[HitReaction]
+|dialogue&gt;[D_HitReaction_<SpeakerId>_Ah]
+|dialogue&gt;[D_HitReaction_<SpeakerId>_ImHit]
+|dialogue&gt;[D_HitReaction_<SpeakerId>_IveBeenHit]
+|dialogue&gt;[D_HitReaction_<SpeakerId>_Ugh]
+
+|scene&gt;[Moving]
+|dialogue&gt;[D_Moving_<SpeakerId>_Advancing]
+|dialogue&gt;[D_Moving_<SpeakerId>_CoverMeImMoving]
+|dialogue&gt;[D_Moving_<SpeakerId>_ImPushingForward]
+|dialogue&gt;[D_Moving_<SpeakerId>_MovingUp]
+
+|scene&gt;[PlayerSpotted]
+|dialogue&gt;[D_PlayerSpotted_<SpeakerId>_HesOverThere]
+|dialogue&gt;[D_PlayerSpotted_<SpeakerId>_HostileSpotted]
+|dialogue&gt;[D_PlayerSpotted_<SpeakerId>_ISeeHim]
+
+|scene&gt;[Reloading]
+|dialogue&gt;[D_Reloading_<SpeakerId>_CoverMeReloading]
+|dialogue&gt;[D_Reloading_<SpeakerId>_ImOutReloading]
+|dialogue&gt;[D_Reloading_<SpeakerId>_ImReloading]
+|dialogue&gt;[D_Reloading_<SpeakerId>_Reloading]
+
+|scene&gt;[StandDown]
+|dialogue&gt;[D_StandDown_<SpeakerId>_AreaLooksClear]
+|dialogue&gt;[D_StandDown_<SpeakerId>_ItsNothing]
+|dialogue&gt;[D_StandDown_<SpeakerId>_MustHaveBeenTheWind]
+
+|scene&gt;[Suspicious]
+|dialogue&gt;[D_Suspicious_<SpeakerId>_DidYouHearThat]
+|dialogue&gt;[D_Suspicious_<SpeakerId>_HuhWhatWasThat]
+|dialogue&gt;[D_Suspicious_<SpeakerId>_WhosThere]
+
+|scene&gt;[ThrowingFlashbang]
+|dialogue&gt;[D_ThrowingFlashbang_<SpeakerId>_FlashOut]
+|dialogue&gt;[D_ThrowingFlashbang_<SpeakerId>_FlashbangOut]
+|dialogue&gt;[D_ThrowingFlashbang_<SpeakerId>_ThrowingFlashbang]
+
+|scene&gt;[ThrowingFrag]
+|dialogue&gt;[D_ThrowingFrag_<SpeakerId>_FragOut]
+|dialogue&gt;[D_ThrowingFrag_<SpeakerId>_GrenadeOut]
+|dialogue&gt;[D_ThrowingFrag_<SpeakerId>_ThrowingFrag]
+|dialogue&gt;[D_ThrowingFrag_<SpeakerId>_TossingFrag]
+
+(align:&quot;==&gt;&quot;)[[[Back to Start|START GAME]]]
+</tw-passagedata><tw-passagedata pid="118" name="Civilian Callouts" tags="" position="1000,350" size="100,100">|act&gt;[(text-style:&quot;underline&quot;)[CIVILIAN CALLOUTS]]
+
+Speaker IDs (current):
+- DonutMaleTypeA
+- DonutMaleTypeB
+
+Filename template:
+D_&lt;Intent&gt;_&lt;SpeakerId&gt;_&lt;DialogueLine&gt;
+
+|action&gt;[Placeholder. Civilian callout lines will be added here.]
+
+(align:&quot;==&gt;&quot;)[[[Back to Start|START GAME]]]
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
