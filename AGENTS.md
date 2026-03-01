@@ -10,8 +10,11 @@
 ## Working Rules
 - Treat the Twine story file as a structured narrative source, not a plain text dump.
 - Preserve passage names and branching structure unless a requested change requires structural edits.
-- For dialogue synchronization tasks, coordinate with Unity-side VO dialogue sheets under:
-  - `Assets/__TSTM__/READMEs/VO_Dialogue/`
+- Treat Twine as the VO script source of truth (no separate CSV workflow).
+- For dialogue synchronization tasks, coordinate with Unity-side audio assets under:
+  - `Assets/__TSTM__/Audio/`
+- Expect VO/callout subfolder names to evolve; verify current Unity folder names before broad sync edits.
+- Keep line codes and `VODMETA` clip identifiers stable unless an explicit renumber/refactor is requested.
 - When changes are ambiguous, prefer producing a reconciliation proposal before applying edits.
 
 ## Session Start Git Sync Check
@@ -40,8 +43,20 @@
   - short summary of narrative or structure edits
   - commit hash (if committed)
 
-## Cross-References
-- Unity cross-tool sync process:
+## Unity Cross-References (Current)
+- Unity project root (local):
+  - `/Users/asimdeyaf/Dropbox/VR Sim Labs LLC/_UNITY/_OfficalCollabProjects/TheSimulationTM`
+  - Note: folder name is intentionally referenced as on disk (`_OfficalCollabProjects`).
+- Unity-side VO/callout asset root:
+  - `Assets/__TSTM__/Audio/`
+- Current VO structure in Unity:
+  - `Assets/__TSTM__/Audio/VO/Act1/Act1_Scene01`
+  - `Assets/__TSTM__/Audio/VO/Act1/Act1_Scene02`
+  - `Assets/__TSTM__/Audio/VO/CivilianCallouts`
+  - `Assets/__TSTM__/Audio/VO/CombatCallouts/` (includes `Breaching`, `HitReaction`, `Moving`, `PlayerSpotted`, `Reloading`, `StandDown`, `Suspicious`, `ThrowingFlashbang`, `ThrowingFrag`)
+- Current audio structure also includes:
+  - `Assets/__TSTM__/Audio/SFX/`
+  - `Assets/__TSTM__/Audio/_SourcePacks/`
+- Deprecated/removed references (do not rely on):
   - `Assets/__TSTM__/READMEs/Documentation/Process/CrossTool/README-TwineVODSyncWorkflow.md`
-- Twine script format standard:
   - `Assets/__TSTM__/READMEs/Documentation/Standards/CrossTool/README-TwineStoryScriptFormat.md`
